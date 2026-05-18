@@ -1,0 +1,50 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    height: 100px;
+    padding: 0px var(--md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            color: #333;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #007BFF;
+            }
+        }
+    }
+
+    .cta-header {
+        display: flex;
+        align-items: center;
+        gap: var(--xs);
+    }
+
+    .logo {
+        height: 32px;
+
+        @media (min-width: 992px) {
+            height: 42px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        padding: 0px 100px;
+    }
+
+}

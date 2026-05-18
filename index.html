@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UgokiUi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+</head>
+
+<body>
+    <!-- bg -->
+    <canvas id="dotGrid"></canvas>
+    <!-- end -->
+
+    <header>
+        <a href="/">
+            <img src="img/logo.svg" class="logo" alt="">
+        </a>
+        <div class="d-none d-lg-block">
+            <div class="menu">
+                <a href="/about.html">About UgokiUi</a>
+                <a href="/component-library.html">Component Library</a>
+                <a href="/how-to-use.html">How to use</a>
+            </div>
+        </div>
+        <div class="d-none d-lg-block">
+            <div class="cta-header">
+                <a href="#" class="bt-s-auto g-1">
+                    Donate
+                    <img src="img/thumb.svg" alt="">
+                </a>
+                <a href="#" class="bt-icon">
+                    <img src="img/discod.svg" alt="">
+                </a>
+                <a href="#" class="bt-icon">
+                    <img src="img/github.svg" alt="">
+                </a>
+                <a href="#" class="bt-icon">
+                    <img src="img/figma.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="d-lg-none">
+            <a href="#" class="bt-icon" onclick="openMenu()">
+                <i class="ti ti-menu-3"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- offcanvas -->
+    <div class="offcanvas-backdrop" id="backdrop" onclick="closeMenu()"></div>
+    <!-- Offcanvas -->
+    <div class="offcanvas" id="offcanvas">
+
+        <div class="offcanvas-header">
+
+            <button class="close-btn" onclick="closeMenu()">
+                ✕
+            </button>
+        </div>
+
+        <nav class="offcanvas-menu">
+            <a href="#">About UgokiUi</a>
+            <a href="#">Component Library</a>
+            <a href="#">How to use</a>
+            <div class="small">
+                <a href="#">FAQ</a>
+                <a href="#">New Releases</a>
+                <a href="#">Donate</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+
+            <div class="cta-header d-flex g-2">
+                <a href="#" class="bt-icon">
+                    <img src="img/discod.svg" alt="">
+                </a>
+                <a href="#" class="bt-icon">
+                    <img src="img/github.svg" alt="">
+                </a>
+                <a href="#" class="bt-icon">
+                    <img src="img/figma.svg" alt="">
+                </a>
+            </div>
+        </nav>
+
+    </div>
+
+    <section class="section-h section-bg">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6">
+                    <h1>
+                        <span class="gradient-text">Free</span> animated components built for faster UI design workflows.
+                    </h1>
+                    <p>including switches, checkboxes, input fields, and more.</p>
+
+                    <div class="review-box py-24">
+                        <div class="avatar-group">
+                            <img class="avatar"
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300" alt="">
+                            <img class="avatar"
+                                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300" alt="">
+                            <img class="avatar"
+                                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300" alt="">
+                            <img class="avatar"
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300" alt="">
+                        </div>
+                        <div class="review-content">
+                            <div class="stars">
+                                <div class="star-icons">
+                                    <svg class="star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                                    </svg>
+                                    <svg class="star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                                    </svg>
+                                    <svg class="star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                                    </svg>
+                                    <svg class="star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                                    </svg>
+                                    <svg class="star-outline" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                                    </svg>
+                                </div>
+                                <span class="rating">4.5</span>
+                            </div>
+                            <p class="review-text">
+                                from 5 star review on Google
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-16">
+                        <a href="#" class="btn-primary">Browse Animations<i class="ti ti-layout-grid"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/banner-animation.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- script -->
+    <script src="js/main.js"></script>
+    <!-- end -->
+</body>
+
+</html>
