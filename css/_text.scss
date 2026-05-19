@@ -17,7 +17,17 @@ h6 {
 h1 {
     font-style: normal;
     font-weight: 500;
-    font-size: 56px;
+    font-size: 36px;
+    letter-spacing: -0.04em;
+    color: var(--black);
+    @media (min-width:992px){
+         font-size: 56px;
+    }
+}
+h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
     letter-spacing: -0.04em;
     color: var(--black);
 }
@@ -36,4 +46,94 @@ h1 {
 
     background-clip: text;
     color: transparent;
+}
+
+/* =========================================
+   Text Align Responsive
+========================================= */
+
+/* XS */
+
+.text-start{
+    text-align:left;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.text-end{
+    text-align:right;
+}
+
+/* SM */
+
+@media (min-width:576px){
+
+    .text-sm-start{
+        text-align:left;
+    }
+
+    .text-sm-center{
+        text-align:center;
+    }
+
+    .text-sm-end{
+        text-align:right;
+    }
+
+}
+
+/* MD */
+
+@media (min-width:768px){
+
+    .text-md-start{
+        text-align:left;
+    }
+
+    .text-md-center{
+        text-align:center;
+    }
+
+    .text-md-end{
+        text-align:right;
+    }
+
+}
+
+/* LG */
+
+@media (min-width:992px){
+
+    .text-lg-start{
+        text-align:left;
+    }
+
+    .text-lg-center{
+        text-align:center;
+    }
+
+    .text-lg-end{
+        text-align:right;
+    }
+
+}
+
+/* XL */
+
+@media (min-width:1200px){
+
+    .text-xl-start{
+        text-align:left;
+    }
+
+    .text-xl-center{
+        text-align:center;
+    }
+
+    .text-xl-end{
+        text-align:right;
+    }
+
 }

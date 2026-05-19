@@ -37,37 +37,79 @@ canvas {
    Smooth Floating Animation
 ========================= */
 
-.floating-frame{
-    display:block;
+.floating-frame {
+    display: block;
 
     animation:
         floating 6s ease-in-out infinite;
 
-    will-change:transform;
+    will-change: transform;
 }
 
 /* =========================
    Animation
 ========================= */
 
-@keyframes floating{
+@keyframes floating {
 
-    0%{
+    0% {
         transform:
-            translateY(0px)
-            rotate(0deg);
+            translateY(0px) rotate(0deg);
     }
 
-    50%{
+    50% {
         transform:
-            translateY(-12px)
-            rotate(1deg);
+            translateY(-12px) rotate(1deg);
     }
 
-    100%{
+    100% {
         transform:
-            translateY(0px)
-            rotate(0deg);
+            translateY(0px) rotate(0deg);
     }
 
+}
+
+
+// slider
+/* Stop the scrolling loop when a user hovers over the images */
+.slider-track:hover {
+    animation-play-state: paused !important;
+}
+
+/* Standardized Card Image Dimensions & Styling */
+.slider-card-img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    /* Ensures images scale cleanly without clipping */
+    border-radius: 24px;
+    flex-shrink: 0;
+    user-select: none;
+    /* Prevents dragging glitches while clicking around */
+}
+
+/* Core Infinite Scroll Animation */
+@keyframes infiniteScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Calculations: 4 distinct images * 320px width + 4 gaps * 24px (1.5rem) = -1376px */
+        transform: translateX(-1376px);
+    }
+}
+
+
+
+/* Space for scrolling */
+.scroll-section {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease;
+}
+
+.scroll-section.show {
+  opacity: 1;
+  transform: scale(1);
 }
