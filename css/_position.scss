@@ -411,3 +411,14 @@
     }
 
 }
+
+.flex-lg-row {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .flex-lg-row {
+    flex-direction: row;
+  }
+}

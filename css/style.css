@@ -377,6 +377,7 @@ h4,
 h5,
 h6 {
   font-family: "Space Grotesk", sans-serif;
+  margin: 0;
 }
 
 h1 {
@@ -395,9 +396,14 @@ h1 {
 h3 {
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 26px;
   letter-spacing: -0.04em;
   color: var(--black);
+}
+@media (min-width: 992px) {
+  h3 {
+    font-size: 36px;
+  }
 }
 
 .gradient-text {
@@ -473,17 +479,50 @@ h3 {
   }
 }
 .section-h {
-  height: 100vh;
+  height: auto;
+  padding: 100px 0px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 992px) {
+  .section-h {
+    height: 100vh;
+    padding: 0px;
+  }
 }
 
 .section-bg {
   background-image: url(../img/banner-bg.webp);
   background-position: center;
   background-size: cover;
+}
+
+.top-padding-mb {
+  padding-top: 150px;
+}
+
+.bg-category {
+  background-image: url(../img/bg-category.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.box-category {
+  width: 100%;
+  height: 123px;
+  background: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .box-category {
+    width: 310px;
+  }
 }
 
 canvas {
@@ -496,7 +535,6 @@ canvas {
 @media (min-width: 992px) {
   canvas {
     display: block;
-    position: absolute;
     top: 0;
     left: 0;
   }
@@ -2275,5 +2313,15 @@ canvas {
   }
   .align-items-xl-end {
     align-items: flex-end;
+  }
+}
+.flex-lg-row {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .flex-lg-row {
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */
