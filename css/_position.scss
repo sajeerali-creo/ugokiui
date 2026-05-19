@@ -1,0 +1,153 @@
+/* =========================================
+   Position Utilities
+========================================= */
+
+/* Static */
+
+.position-static{
+    position:static;
+}
+
+/* Relative */
+
+.position-relative{
+    position:relative;
+}
+
+/* Absolute */
+
+.position-absolute{
+    position:absolute;
+}
+
+/* Fixed */
+
+.position-fixed{
+    position:fixed;
+}
+
+/* Sticky */
+
+.position-sticky{
+    position:sticky;
+}
+
+/* =========================================
+   Top
+========================================= */
+
+.top-0{
+    top:0;
+}
+
+.top-50{
+    top:50%;
+}
+
+.top-100{
+    top:100%;
+}
+
+/* =========================================
+   Bottom
+========================================= */
+
+.bottom-0{
+    bottom:0;
+}
+
+.bottom-50{
+    bottom:50%;
+}
+
+.bottom-100{
+    bottom:100%;
+}
+
+/* =========================================
+   Left
+========================================= */
+
+.left-0{
+    left:0;
+}
+
+.left-50{
+    left:50%;
+}
+
+.left-100{
+    left:100%;
+}
+
+/* =========================================
+   Right
+========================================= */
+
+.right-0{
+    right:0;
+}
+
+.right-50{
+    right:50%;
+}
+
+.right-100{
+    right:100%;
+}
+
+/* =========================================
+   Center Position
+========================================= */
+
+.translate-middle{
+    transform:translate(-50%, -50%);
+}
+
+.translate-middle-x{
+    transform:translateX(-50%);
+}
+
+.translate-middle-y{
+    transform:translateY(-50%);
+}
+
+/* =========================================
+   Z-Index
+========================================= */
+
+.z-0{
+    z-index:0;
+}
+
+.z-1{
+    z-index:1;
+}
+
+.z-10{
+    z-index:10;
+}
+
+.z-100{
+    z-index:100;
+}
+
+.z-1000{
+    z-index:1000;
+}
+
+/* =========================================
+   Example
+========================================= */
+
+/*
+
+<div class="position-relative">
+
+    <div class="position-absolute top-0 right-0">
+        Badge
+    </div>
+
+</div>
+
+*/
