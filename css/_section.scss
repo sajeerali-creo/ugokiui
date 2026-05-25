@@ -62,4 +62,11 @@
   background-color: var(--white);
   flex-shrink: 0;
   font-size: 20px;
+  color: #424BFF;
+}
+.center-position{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
