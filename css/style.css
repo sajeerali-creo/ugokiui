@@ -512,7 +512,7 @@ h3 {
 .box-category {
   width: 100%;
   height: 123px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 16px;
   display: flex;
@@ -543,6 +543,7 @@ h3 {
   justify-content: center;
   background-color: var(--white);
   flex-shrink: 0;
+  font-size: 20px;
 }
 
 canvas {
