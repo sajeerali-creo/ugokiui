@@ -1,0 +1,22 @@
+footer {
+  background-color: #0f172a;
+  padding: 100px 0px;
+  .logo {
+    height: 50px;
+  }
+}
+
+.social {
+  a {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 160px;
+    background-color: #3d4352;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 20px;
+  }
+}

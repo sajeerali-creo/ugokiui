@@ -1,49 +1,46 @@
 canvas {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: 992px) {
-
-    canvas {
-        display: block;
-        top: 0;
-        left: 0;
-        z-index: 3;
-    }
+  canvas {
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
 }
 
 .box-anima {
-    max-width: 500px;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 20px;
-    position: relative;
+  max-width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
 }
 
 .overflow-top {
-    position: absolute;
-    top: -30px;
-    left: 30px;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
 }
-
 
 /* =========================
    Smooth Floating Animation
 ========================= */
 
 .floating-frame {
-    display: block;
+  display: block;
 
-    animation:
-        floating 6s ease-in-out infinite;
+  animation: floating 6s ease-in-out infinite;
 
-    will-change: transform;
+  will-change: transform;
 }
 
 /* =========================
@@ -51,56 +48,48 @@ canvas {
 ========================= */
 
 @keyframes floating {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
 
-    0% {
-        transform:
-            translateY(0px) rotate(0deg);
-    }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
 
-    50% {
-        transform:
-            translateY(-12px) rotate(1deg);
-    }
-
-    100% {
-        transform:
-            translateY(0px) rotate(0deg);
-    }
-
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
-
 
 // slider
 /* Stop the scrolling loop when a user hovers over the images */
 .slider-track:hover {
-    animation-play-state: paused !important;
+  animation-play-state: paused !important;
 }
 
 /* Standardized Card Image Dimensions & Styling */
 .slider-card-img {
-    width: 400px;
-    height: 400px;
-    object-fit: contain;
-    /* Ensures images scale cleanly without clipping */
-    border-radius: 24px;
-    flex-shrink: 0;
-    user-select: none;
-    /* Prevents dragging glitches while clicking around */
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  /* Ensures images scale cleanly without clipping */
+  border-radius: 24px;
+  flex-shrink: 0;
+  user-select: none;
+  /* Prevents dragging glitches while clicking around */
 }
 
 /* Core Infinite Scroll Animation */
 @keyframes infiniteScroll {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    100% {
-        /* Calculations: 4 distinct images * 320px width + 4 gaps * 24px (1.5rem) = -1376px */
-        transform: translateX(-1376px);
-    }
+  100% {
+    /* Calculations: 4 distinct images * 320px width + 4 gaps * 24px (1.5rem) = -1376px */
+    transform: translateX(-1376px);
+  }
 }
-
-
 
 /* Space for scrolling */
 .scroll-section {
@@ -113,8 +102,6 @@ canvas {
   opacity: 1;
   transform: scale(1);
 }
-
-
 
 // steps
 .step-item {
@@ -143,4 +130,9 @@ canvas {
 
 .step-item:nth-child(4) {
   transition-delay: 0.7s;
+}
+
+.fix-dot {
+  position: relative;
+  z-index: 9;
 }

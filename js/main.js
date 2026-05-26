@@ -77,8 +77,6 @@ function animateDots() {
 initCanvas();
 animateDots();
 
-
-
 // ===============================
 // STEP ITEM SCROLL ANIMATION
 // ===============================
@@ -88,26 +86,22 @@ const items = document.querySelectorAll(".step-item");
 const stepObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
       } else {
         entry.target.classList.remove("show");
       }
-
     });
   },
   {
     threshold: 0.2,
-  }
+  },
 );
 
 // Observe all step items
 items.forEach((item) => {
   stepObserver.observe(item);
 });
-
-
 
 // ===============================
 // SECTION SCROLL ANIMATION
@@ -118,21 +112,29 @@ const sections = document.querySelectorAll(".scroll-section");
 const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
       } else {
         entry.target.classList.remove("show");
       }
-
     });
   },
   {
     threshold: 0.2,
-  }
+  },
 );
 
 // Observe all sections
 sections.forEach((section) => {
   sectionObserver.observe(section);
 });
+
+function openMenu() {
+  document.getElementById("offcanvas").classList.add("active");
+  document.getElementById("backdrop").classList.add("show");
+}
+
+function closeMenu() {
+  document.getElementById("offcanvas").classList.remove("active");
+  document.getElementById("backdrop").classList.remove("show");
+}

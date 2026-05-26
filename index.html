@@ -1,169 +1,201 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UgokiUi</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UgokiUi</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-</head>
+  <body>
+    <!-- bg -->
+    <canvas id="dotGrid"></canvas>
+    <!-- end -->
 
-<body>
-  <!-- bg -->
-  <canvas id="dotGrid"></canvas>
-  <!-- end -->
-
-  <header>
-    <a href="/">
-      <img src="img/logo.svg" class="logo" alt="" />
-    </a>
-    <div class="d-none d-lg-block">
-      <div class="menu">
-        <a href="/about.html">About UgokiUi</a>
-        <a href="/component-library.html">Component Library</a>
-        <a href="/how-to-use.html">How to use</a>
-      </div>
-    </div>
-    <div class="d-none d-lg-block">
-      <div class="cta-header">
-        <a href="#" class="bt-s-auto g-1">
-          Donate
-          <img src="img/thumb.svg" alt="" />
-        </a>
-        <a href="#" class="bt-icon">
-          <img src="img/discod.svg" alt="" />
-        </a>
-        <a href="#" class="bt-icon">
-          <img src="img/github.svg" alt="" />
-        </a>
-        <a href="#" class="bt-icon">
-          <img src="img/figma.svg" alt="" />
-        </a>
-      </div>
-    </div>
-    <div class="d-lg-none">
-      <a href="#" class="bt-icon" onclick="openMenu()">
-        <i class="ti ti-menu-3"></i>
+    <header>
+      <a href="/">
+        <img src="img/logo.svg" class="logo" alt="" />
       </a>
-    </div>
-  </header>
-
-  <!-- offcanvas -->
-  <div class="offcanvas-backdrop" id="backdrop" onclick="closeMenu()"></div>
-  <!-- Offcanvas -->
-  <div class="offcanvas" id="offcanvas">
-    <div class="offcanvas-header">
-      <button class="close-btn" onclick="closeMenu()">✕</button>
-    </div>
-
-    <nav class="offcanvas-menu">
-      <a href="#">About UgokiUi</a>
-      <a href="#">Component Library</a>
-      <a href="#">How to use</a>
-      <div class="small">
-        <a href="#">FAQ</a>
-        <a href="#">New Releases</a>
-        <a href="#">Donate</a>
-        <a href="#">Terms and Conditions</a>
+      <div class="d-none d-lg-block">
+        <div class="menu">
+          <a href="/about.html">About UgokiUi</a>
+          <a href="/component-library.html">Component Library</a>
+          <a href="/how-to-use.html">How to use</a>
+        </div>
       </div>
-
-      <div class="cta-header d-flex g-2">
-        <a href="#" class="bt-icon">
-          <img src="img/discod.svg" alt="" />
-        </a>
-        <a href="#" class="bt-icon">
-          <img src="img/github.svg" alt="" />
-        </a>
-        <a href="#" class="bt-icon">
-          <img src="img/figma.svg" alt="" />
+      <div class="d-none d-lg-block">
+        <div class="cta-header">
+          <a href="#" class="bt-s-auto g-1">
+            Donate
+            <img src="img/thumb.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/discod.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/github.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/figma.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="d-lg-none">
+        <a href="#" class="bt-icon" onclick="openMenu()">
+          <i class="ti ti-menu-3"></i>
         </a>
       </div>
-    </nav>
-  </div>
+    </header>
 
-  <section class="section-h section-bg top-padding-mb scroll-section">
-    <div class="container">
-      <div class="row d-flex align-items-centerw">
-        <div class="col-lg-6 text-center text-lg-start">
-          <h1>
-            <span class="gradient-text">Free</span> animated components built
-            for faster UI design workflows.
-          </h1>
-          <p class="py-24">
-            including switches, checkboxes, input fields, and more.
-          </p>
+    <!-- offcanvas -->
+    <div class="offcanvas-backdrop" id="backdrop" onclick="closeMenu()"></div>
+    <!-- Offcanvas -->
+    <div class="offcanvas" id="offcanvas">
+      <div class="offcanvas-header">
+        <button class="close-btn" onclick="closeMenu()">✕</button>
+      </div>
 
-          <div class="review-box py-24 d-flex justify-content-center justify-content-lg-start">
-            <div class="avatar-group">
-              <img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300"
-                alt="" />
-              <img class="avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300"
-                alt="" />
-              <img class="avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300"
-                alt="" />
-              <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300"
-                alt="" />
-            </div>
-            <div class="review-content">
-              <div class="stars">
-                <div class="star-icons">
-                  <svg class="star" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                  </svg>
-                  <svg class="star" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                  </svg>
-                  <svg class="star" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                  </svg>
-                  <svg class="star" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                  </svg>
-                  <svg class="star-outline" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                  </svg>
-                </div>
-                <span class="rating">4.5</span>
+      <nav class="offcanvas-menu">
+        <a href="#">About UgokiUi</a>
+        <a href="#">Component Library</a>
+        <a href="#">How to use</a>
+        <div class="small">
+          <a href="#">FAQ</a>
+          <a href="#">New Releases</a>
+          <a href="#">Donate</a>
+          <a href="#">Terms and Conditions</a>
+        </div>
+
+        <div class="cta-header d-flex g-2">
+          <a href="#" class="bt-icon">
+            <img src="img/discod.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/github.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/figma.svg" alt="" />
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <section class="section-h section-bg top-padding-mb">
+      <div class="container fix-dot">
+        <div class="row d-flex flex-column flex-lg-row align-items-centerw">
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1>
+              <span class="gradient-text">Free</span> animated components built
+              for faster UI design workflows.
+            </h1>
+            <p class="py-24">
+              including switches, checkboxes, input fields, and more.
+            </p>
+
+            <div
+              class="review-box py-24 d-flex justify-content-center justify-content-lg-start"
+            >
+              <div class="avatar-group">
+                <img
+                  class="avatar"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300"
+                  alt=""
+                />
+                <img
+                  class="avatar"
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300"
+                  alt=""
+                />
+                <img
+                  class="avatar"
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300"
+                  alt=""
+                />
+                <img
+                  class="avatar"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300"
+                  alt=""
+                />
               </div>
-              <p class="review-text">from 5 star review on Google</p>
+              <div class="review-content">
+                <div class="stars">
+                  <div class="star-icons">
+                    <svg class="star" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                      />
+                    </svg>
+                    <svg class="star" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                      />
+                    </svg>
+                    <svg class="star" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                      />
+                    </svg>
+                    <svg class="star" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                      />
+                    </svg>
+                    <svg class="star-outline" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="rating">4.5</span>
+                </div>
+                <p class="review-text">from 5 star review on Google</p>
+              </div>
             </div>
-          </div>
 
-          <div class="d-flex mt-16 justify-content-center justify-content-lg-start">
-            <a href="#" class="btn-primary">Browse Animations<i class="ti ti-layout-grid"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-6 d-none d-lg-block">
-          <div class="d-flex justify-content-end position-relative">
-            <div class="overflow-top">
-              <img class="floating-frame" src="img/frame.svg" alt="" />
+            <div
+              class="d-flex mt-16 justify-content-center justify-content-lg-start"
+            >
+              <a href="#" class="btn-primary"
+                >Browse Animations<i class="ti ti-layout-grid"></i
+              ></a>
             </div>
-            <div class="box-anima">
-              <img src="img/animation.gif" class="hero-img" alt="" />
+          </div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <div class="d-flex justify-content-end position-relative">
+              <div class="overflow-top">
+                <img class="floating-frame" src="img/frame.svg" alt="" />
+              </div>
+              <div class="box-anima">
+                <img src="img/animation.gif" class="hero-img" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section-h flex-column bg-navy">
-    <div class="container">
+    <section class="section-h flex-column bg-navy">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between mb-48 flex-column flex-lg-row align-items-center g-4 text-center text-lg-start"
+        >
+          <h3 class="text-white">Featured / Trending Components</h3>
+          <a href="#" class="text-white opacity-50 d-flex align-items-center"
+            >View all&nbsp;<i class="ti ti-arrow-up-right"></i
+          ></a>
+        </div>
+      </div>
       <div
-        class="d-flex justify-content-between mb-48 flex-column flex-lg-row align-items-center g-4 text-center text-lg-start">
-        <h3 class="text-white">Featured / Trending Components</h3>
-        <a href="#" class="text-white opacity-50 d-flex align-items-center">View all&nbsp;<i
-            class="ti ti-arrow-up-right"></i></a>
-      </div>
-    </div>
-    <div class="slider-viewport" style="
+        class="slider-viewport"
+        style="
           width: 100%;
           overflow: hidden;
           position: relative;
@@ -181,109 +213,310 @@
             #000 90%,
             transparent
           );
-        ">
-      <div class="slider-track" style="
+        "
+      >
+        <div
+          class="slider-track"
+          style="
             display: flex;
             gap: 1.5rem;
             width: max-content;
             animation: infiniteScroll 25s linear infinite;
-          ">
-        <img class="slider-card-img" src="img/animation.gif" alt="Camping Component" />
-        <img class="slider-card-img" src="img/animation.gif" alt="User Research Accordion" />
-        <img class="slider-card-img" src="img/animation.gif" alt="Email Notification Component" />
-        <img class="slider-card-img" src="img/animation.gif" alt="AI Hexagon Generator" />
-        <img class="slider-card-img" src="img/animation.gif" alt="Camping Component Copy" />
-        <img class="slider-card-img" src="img/animation.gif" alt="User Research Accordion Copy" />
-        <img class="slider-card-img" src="img/animation.gif" alt="Email Notification Component Copy" />
-        <img class="slider-card-img" src="img/animation.gif" alt="AI Hexagon Generator Copy" />
+          "
+        >
+          <img
+            class="slider-card-img"
+            src="img/animation.gif"
+            alt="Camping Component"
+          />
+          <img
+            class="slider-card-img"
+            src="img/animation.gif"
+            alt="User Research Accordion"
+          />
+          <img
+            class="slider-card-img"
+            src="img/animation.gif"
+            alt="Email Notification Component"
+          />
+          <img
+            class="slider-card-img"
+            src="img/animation.gif"
+            alt="AI Hexagon Generator"
+          />
+          <img
+            class="slider-card-img"
+            src="img/animation.gif"
+            alt="Camping Component Copy"
+          />
+          <img
+            class="slider-card-img"
+            src="img/animation.gif"
+            alt="User Research Accordion Copy"
+          />
+          <img
+            class="slider-card-img"
+            src="img/animation.gif"
+            alt="Email Notification Component Copy"
+          />
+          <img
+            class="slider-card-img"
+            src="img/animation.gif"
+            alt="AI Hexagon Generator Copy"
+          />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section-h bg-category position-relative scroll-section">
-    <div class="container">
-      <h3 class="text-dark text-center mb-48">Component Categories</h3>
-      <div class="d-flex flex-column flex-lg-row g-4 justify-content-center">
-        <div class="box-category">Forms & Inputs</div>
-        <div class="box-category">Forms & Inputs</div>
-        <div class="box-category">Forms & Inputs</div>
-        <div class="box-category">Forms & Inputs</div>
+    <section class="section-h bg-category position-relative scroll-section">
+      <div class="container">
+        <h3 class="text-dark text-center mb-48">Component Categories</h3>
+        <div class="d-flex flex-column flex-lg-row g-4 justify-content-center">
+          <div class="box-category">Forms & Inputs</div>
+          <div class="box-category">Forms & Inputs</div>
+          <div class="box-category">Forms & Inputs</div>
+          <div class="box-category">Forms & Inputs</div>
+        </div>
+        <div
+          class="d-flex flex-column flex-lg-row g-4 justify-content-center mt-24"
+        >
+          <div class="box-category">Forms & Inputs</div>
+          <div class="box-category">Forms & Inputs</div>
+          <div class="box-category">Forms & Inputs</div>
+        </div>
+        <div class="d-flex mt-16 justify-content-center mt-48">
+          <a href="#" class="btn-primary"
+            >Explore All Categories<i class="ti ti-layout-grid"></i
+          ></a>
+        </div>
       </div>
-      <div class="d-flex flex-column flex-lg-row g-4 justify-content-center mt-24">
-        <div class="box-category">Forms & Inputs</div>
-        <div class="box-category">Forms & Inputs</div>
-        <div class="box-category">Forms & Inputs</div>
-      </div>
-      <div class="d-flex mt-16 justify-content-center mt-48">
-        <a href="#" class="btn-primary">Explore All Categories<i class="ti ti-layout-grid"></i></a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section-h p-24">
-    <div class="section-c p-48 center-position">
-      <h3 class="mb-48 text-center">
-        How it Works <span class="gradient-text">ugokiui</span>
-      </h3>
-      <div class="container mt-48">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="steps-wrapper">
+    <section class="section-h p-24">
+      <div class="section-c p-lg-48 center-position">
+        <h3 class="mb-48 text-center">
+          How it Works <span class="gradient-text">ugokiui</span>
+        </h3>
+        <div class="container mt-lg-48">
+          <div class="row justify-content-between">
+            <div class="col-lg-6">
+              <div class="steps-wrapper">
+                <div class="step-item d-flex g-4 align-items-center mb-48">
+                  <div class="circle">1</div>
+                  <div class="d-flex g-2 flex-column">
+                    <h4>Browse Components</h4>
+                    <p class="opacity-60">
+                      Explore a wide collection of free animated UI components
+                      made for modern design systems.
+                    </p>
+                  </div>
+                </div>
 
-              <div class="step-item d-flex g-4 align-items-center mb-48">
-                <div class="circle">1</div>
-                <div class="d-flex g-2 flex-column">
-                  <h4>Browse Components</h4>
-                  <p class="opacity-60">
-                    Explore a wide collection of free animated UI components
-                    made for modern design systems.
-                  </p>
+                <div class="step-item d-flex g-4 align-items-center mb-48">
+                  <div class="circle">2</div>
+                  <div class="d-flex g-2 flex-column">
+                    <h4>Open in Figma</h4>
+                    <p class="opacity-60">
+                      Click any component and instantly open it in Figma. No
+                      setup required.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="step-item d-flex g-4 align-items-center mb-48">
+                  <div class="circle">3</div>
+                  <div class="d-flex g-2 flex-column">
+                    <h4>Copy the Component</h4>
+                    <p class="opacity-60">
+                      Duplicate or copy the component into your own Figma file
+                      with one click.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="step-item d-flex g-4 align-items-center mb-48">
+                  <div class="circle">4</div>
+                  <div class="d-flex g-2 flex-column">
+                    <h4>Use in Your Project</h4>
+                    <p class="opacity-60">
+                      Drag and drop into your design. Customize it and use it
+                      freely in your product or UI.
+                    </p>
+                  </div>
                 </div>
               </div>
-
-              <div class="step-item d-flex g-4 align-items-center mb-48">
-                <div class="circle">2</div>
-                <div class="d-flex g-2 flex-column">
-                  <h4>Open in Figma</h4>
-                  <p class="opacity-60">
-                    Click any component and instantly open it in Figma. No setup required.
-                  </p>
-                </div>
-              </div>
-
-              <div class="step-item d-flex g-4 align-items-center mb-48">
-                <div class="circle">3</div>
-                <div class="d-flex g-2 flex-column">
-                  <h4>Copy the Component</h4>
-                  <p class="opacity-60">
-                    Duplicate or copy the component into your own Figma file with one click.
-                  </p>
-                </div>
-              </div>
-
-              <div class="step-item d-flex g-4 align-items-center mb-48">
-                <div class="circle">4</div>
-                <div class="d-flex g-2 flex-column">
-                  <h4>Use in Your Project</h4>
-                  <p class="opacity-60">
-                    Drag and drop into your design. Customize it and use it freely in your product or UI.
-                  </p>
-                </div>
-              </div>
-
             </div>
-          </div>
-          <div class="col-lg-6">
-            di
+            <div class="col-lg-5">
+              <div class="box-white scroll-section"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- script -->
-  <script src="js/main.js"></script>
-  <!-- end -->
-</body>
+    <section class="section-h">
+      <div class="container">
+        <div class="text-center d-flex justify-content-center mb-24">
+          <img src="img/recent.svg" alt="" />
+        </div>
+        <h3 class="text-dark text-center mb-48">New Releases</h3>
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6">
+            <div class="new-relese"></div>
+            <div class="d-flex mt-16 justify-content-center mt-48">
+              <a href="#" class="btn-primary"
+                >Get This Component<i class="ti ti-arrow-up-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section-h bg-light-gray">
+      <div class="container">
+        <h3 class="text-dark text-center">Loved by Designers Worldwide</h3>
+        <p class="small text-center mb-48">
+          Real feedback from designers using our components in live projects.
+        </p>
+        <section class="review-section">
+          <div class="review-grid">
+            <div class="review-card">
+              <div class="rating">★ ★ ★ ★ ☆ <span>4.5</span></div>
+
+              <p class="review-text py-24">Thank you! very useful ❤️</p>
+
+              <div class="review-user">
+                <img src="https://i.pravatar.cc/40?img=12" alt="" />
+                <div>
+                  <h4>Rahul John</h4>
+                  <span>(UI/UX Expert)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rating">★ ★ ★ ★ ☆ <span>4.5</span></div>
+
+              <p class="review-text py-24">Thank you! very useful ❤️</p>
+
+              <div class="review-user">
+                <img src="https://i.pravatar.cc/40?img=13" alt="" />
+                <div>
+                  <h4>Rahul John</h4>
+                  <span>(UI/UX Expert)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rating">★ ★ ★ ★ ☆ <span>4.5</span></div>
+
+              <p class="review-text py-24">Thank you! very useful ❤️</p>
+
+              <div class="review-user">
+                <img src="https://i.pravatar.cc/40?img=14" alt="" />
+                <div>
+                  <h4>Rahul John</h4>
+                  <span>(UI/UX Expert)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rating">★ ★ ★ ★ ☆ <span>4.5</span></div>
+
+              <p class="review-text py-24">Thank you! very useful ❤️</p>
+
+              <div class="review-user">
+                <img src="https://i.pravatar.cc/40?img=15" alt="" />
+                <div>
+                  <h4>Rahul John</h4>
+                  <span>(UI/UX Expert)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rating">★ ★ ★ ★ ☆ <span>4.5</span></div>
+
+              <p class="review-text py-24">Thank you! very useful ❤️</p>
+
+              <div class="review-user">
+                <img src="https://i.pravatar.cc/40?img=16" alt="" />
+                <div>
+                  <h4>Rahul John</h4>
+                  <span>(UI/UX Expert)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rating">★ ★ ★ ★ ☆ <span>4.5</span></div>
+
+              <p class="review-text py-24">Thank you! very useful ❤️</p>
+
+              <div class="review-user">
+                <img src="https://i.pravatar.cc/40?img=17" alt="" />
+                <div>
+                  <h4>Rahul John</h4>
+                  <span>(UI/UX Expert)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex mt-16 justify-content-center mt-48 text-center w-100"
+          >
+            <a href="#" class="btn-primary"
+              >Tell Us What You Think<i class="ti ti-arrow-up-right"></i
+            ></a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="img/logo-footer.svg" class="logo" ="" />
+        </div>
+        <div class="text-center text-white opacity-50 mt-24">
+          A product of Creotopi
+        </div>
+
+        <div class="text-center text-white mt-48">Quick Links</div>
+        <div
+          class="d-flex flex-column flex-lg-row g-3 justify-content-center mt-24 text-white opacity-50 text-center"
+        >
+          <a href="#">Browse Components</a>
+          <img src="img/line.svg" class="d-none d-lg-block" alt="" />
+          <a href="#">Categoriess</a>
+          <img src="img/line.svg" class="d-none d-lg-block" alt="" />
+          <a href="#">New Releases</a>
+          <img src="img/line.svg" class="d-none d-lg-block" alt="" />
+          <a href="#">How it Works</a>
+          <img src="img/line.svg" class="d-none d-lg-block" alt="" />
+          <a href="#">License</a>
+        </div>
+
+        <div class="d-flex g-3 mt-48 social justify-content-center">
+          <a href="#">
+            <i class="ti ti-brand-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="ti ti-brand-figma"></i>
+          </a>
+        </div>
+
+        <div class="text-center text-white opacity-50 mt-48">
+          © 2026 ugokiui. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="js/main.js"></script>
+    <!-- end -->
+  </body>
 </html>

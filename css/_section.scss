@@ -16,24 +16,36 @@
   background-color: hsla(333, 0%, 100%, 1);
 
   background-image:
-    radial-gradient(circle at 0% 0%,
+    radial-gradient(
+      circle at 0% 0%,
       hsla(64, 82%, 77%, 0.35) 3%,
-      transparent 40%),
-    radial-gradient(circle at 20% 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 20% 0%,
       hsla(5, 77%, 74%, 0.35) 3%,
-      transparent 40%),
-    radial-gradient(circle at 40% 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 40% 0%,
       hsla(315, 77%, 74%, 0.35) 3%,
-      transparent 40%),
-    radial-gradient(circle at 60% 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 60% 0%,
       hsla(256, 77%, 74%, 0.35) 3%,
-      transparent 40%),
-    radial-gradient(circle at 80% 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
       hsla(191, 77%, 74%, 0.35) 3%,
-      transparent 40%),
-    radial-gradient(circle at 100% 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
       hsla(152, 77%, 74%, 0.35) 3%,
-      transparent 40%),
+      transparent 40%
+    ),
     url("../img/banner-bg.webp");
 
   background-position: center;
@@ -73,14 +85,18 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  padding: 24px;
   border-radius: 20px;
+  @media (min-width: 992px) {
+    height: 100vh;
+  }
 }
 
 // steps§
 .circle {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 160px;
   display: flex;
   align-items: center;
@@ -88,7 +104,7 @@
   background-color: var(--white);
   flex-shrink: 0;
   font-size: 20px;
-  color: #424BFF;
+  color: #424bff;
 }
 
 .center-position {
@@ -96,4 +112,112 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.box-white {
+  background-color: #ffffff;
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.new-relese {
+  width: 100%;
+  height: 400px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+.bg-light-gray {
+  background-color: #f3f3f4;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  transition: 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+}
+
+.rating {
+  color: #4b56ff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating span {
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.review-text {
+  font-size: 16px;
+  color: #111;
+  line-height: 1.3;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-user img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-user h4 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 500;
+  color: #111;
+}
+
+.review-user span {
+  color: #8b8b8b;
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media (max-width: 992px) {
+  .review-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-text {
+    font-size: 16px;
+  }
+
+  .review-user h4,
+  .review-user span {
+    font-size: 16px;
+  }
+
+  .rating {
+    font-size: 16px;
+  }
+
+  .rating span {
+    font-size: 16px;
+  }
 }
