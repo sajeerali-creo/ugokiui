@@ -82,6 +82,11 @@ header {
   cursor: pointer;
   transition: 0.3s;
   white-space: nowrap;
+  &:hover {
+    background: #07132d;
+    color: #fff;
+    border-color: #07132d;
+  }
 }
 
 .tab.active {

@@ -365,6 +365,11 @@ header .logo {
   transition: 0.3s;
   white-space: nowrap;
 }
+.tab:hover {
+  background: #07132d;
+  color: #fff;
+  border-color: #07132d;
+}
 
 .tab.active {
   background: #07132d;
@@ -1722,6 +1727,44 @@ canvas {
     display: inline;
   }
 }
+.compo-box {
+  width: 100%;
+  height: 476px;
+  display: flex;
+  border-radius: 16px;
+  background-color: var(--white);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.8s ease;
+}
+.compo-box:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.compo-box img {
+  width: 100%;
+  height: 476px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.8s ease;
+}
+.compo-box .new-label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.compo-box .new-label i {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  border-radius: 160px;
+  background-color: #ff383c;
+}
+
 :root {
   /* Spacing Scale */
   --xs: 8px;
