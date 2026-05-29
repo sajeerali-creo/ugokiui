@@ -74,9 +74,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (min-width: 992px) {
     width: 310px;
+  }
+}
+
+.box-category::before {
+  content: "";
+  position: absolute;
+  inset: -100px;
+  background:
+    radial-gradient(circle at 20% 20%, #7c4dff, transparent 35%),
+    radial-gradient(circle at 80% 20%, #00d4ff, transparent 35%),
+    radial-gradient(circle at 50% 90%, #62ff8f, transparent 35%);
+  opacity: 0;
+  filter: blur(60px);
+  animation: meshMove 8s linear infinite;
+  transition: 0.5s;
+}
+
+.box-category:hover::before {
+  opacity: 0.9;
+}
+
+.box-category > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes meshMove {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.3);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
   }
 }
 
@@ -133,9 +174,28 @@
 .review-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 24px;
 }
 
+@media (max-width: 768px) {
+  .review-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .review-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .review-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+}
 .review-card {
   background: #fff;
   border-radius: 18px;

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UgokiUi</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- bg -->
+    <canvas id="dotGrid"></canvas>
+    <!-- end -->
+
+    <header>
+      <a href="/">
+        <img src="img/logo.svg" class="logo" alt="" />
+      </a>
+      <div class="d-none d-lg-block">
+        <div class="menu">
+          <a href="/about.html">About UgokiUi</a>
+          <a href="/component-library.html" class="active">Component Library</a>
+          <a href="/how-to-use.html">How to use</a>
+        </div>
+      </div>
+      <div class="d-none d-lg-block">
+        <div class="cta-header">
+          <a href="#" class="bt-s-auto g-1">
+            Donate
+            <img src="img/thumb.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/discod.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/github.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/figma.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="d-lg-none">
+        <a href="#" class="bt-icon" onclick="openMenu()">
+          <i class="ti ti-menu-3"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- offcanvas -->
+    <div class="offcanvas-backdrop" id="backdrop" onclick="closeMenu()"></div>
+    <!-- Offcanvas -->
+    <div class="offcanvas" id="offcanvas">
+      <div class="offcanvas-header">
+        <button class="close-btn" onclick="closeMenu()">✕</button>
+      </div>
+
+      <nav class="offcanvas-menu">
+        <a href="#">About UgokiUi</a>
+        <a href="#">Component Library</a>
+        <a href="#">How to use</a>
+        <div class="small">
+          <a href="#">FAQ</a>
+          <a href="#">New Releases</a>
+          <a href="#">Donate</a>
+          <a href="#">Terms and Conditions</a>
+        </div>
+
+        <div class="cta-header d-flex g-2">
+          <a href="#" class="bt-icon">
+            <img src="img/discod.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/github.svg" alt="" />
+          </a>
+          <a href="#" class="bt-icon">
+            <img src="img/figma.svg" alt="" />
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <section class="section-bg top-padding-mb pb-48">
+      <div class="container fix-dot">
+        <section class="component-search">
+          <div class="category-tabs">
+            <button class="tab active">Forms & Inputs</button>
+            <button class="tab">Navigation</button>
+            <button class="tab">Buttons & Switches</button>
+            <button class="tab">AI & Intelligent UI Patterns</button>
+            <button class="tab">Loaders & Skeletons</button>
+            <button class="tab">Charts & Data UI</button>
+            <button class="tab">Cards & Layouts</button>
+          </div>
+
+          <div class="search-wrapper">
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none">
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M20 20L17 17"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+
+              <input
+                type="text"
+                placeholder="Search by component e.g.buttons"
+              />
+
+              <svg
+                class="arrow-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 4V11C20 12.0609 19.5786 13.0783 18.8284 13.8284C18.0783 14.5786 17.0609 15 16 15H4"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9 10L4 15L9 20"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="img/logo-footer.svg" class="logo" ="" />
+        </div>
+        <div class="text-center text-white opacity-50 mt-24">
+          A product of Creotopi
+        </div>
+
+        <div class="text-center text-white mt-48">Quick Links</div>
+        <div
+          class="d-flex flex-column flex-lg-row g-3 justify-content-center mt-24 text-white opacity-50 text-center"
+        >
+          <a href="#">Browse Components</a>
+          <img src="img/line.svg" class="d-none d-lg-block" alt="" />
+          <a href="#">Categoriess</a>
+          <img src="img/line.svg" class="d-none d-lg-block" alt="" />
+          <a href="#">New Releases</a>
+          <img src="img/line.svg" class="d-none d-lg-block" alt="" />
+          <a href="#">How it Works</a>
+          <img src="img/line.svg" class="d-none d-lg-block" alt="" />
+          <a href="#">License</a>
+        </div>
+
+        <div class="d-flex g-3 mt-48 social justify-content-center">
+          <a href="#">
+            <i class="ti ti-brand-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="ti ti-brand-figma"></i>
+          </a>
+        </div>
+
+        <div class="text-center text-white opacity-50 mt-48">
+          © 2026 ugokiui. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="js/main.js"></script>
+    <!-- end -->
+  </body>
+</html>
