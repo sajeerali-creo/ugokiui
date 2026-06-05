@@ -281,3 +281,47 @@
     font-size: 16px;
   }
 }
+.border-top {
+  border-top: 1px solid #e1e1e1;
+}
+.number {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 160px;
+  background-color: var(--white);
+  color: var(--color-primary);
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  font-size: 14px;
+  border: 1px solid #e1e1e1;
+}
+.list-step {
+  h4 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+.box-use {
+  background-image: url(../img/bg-use.webp);
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 24px;
+}
+.tags {
+  display: flex;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--white);
+  font-size: 14px;
+}
+.box-what {
+  background-color: var(--white);
+  border-radius: 16px;
+  width: 100%;
+}

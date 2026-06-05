@@ -236,3 +236,17 @@ select:focus {
   box-shadow: none;
   background: transparent;
 }
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.rounded {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+ul {
+  li {
+    font-size: 16px;
+  }
+}
