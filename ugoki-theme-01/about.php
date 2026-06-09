@@ -3,7 +3,7 @@
 ?>
 <?php get_header(); ?>
 <section class="section-bg top-padding-mb pb-48">
-  <div class="fix-dot side-padding">
+  <div class="fix-dot container">
     <div class="d-flex justify-content-center">
 
     </div>
@@ -48,7 +48,7 @@
 </section>
 
 <section class="pb-48">
-  <div class="pt-48 side-padding">
+  <div class="pt-48 container">
     <div class="row">
       <div class="col-lg-6">
         <div class="box-use mb-24">
@@ -120,10 +120,10 @@
         <div class="d-flex g-3 list-step align-items-center mb-48">
           <div class="number">5</div>
           <div>
-            <h4>Browse Components</h4>
+            <h4>Share Your Feedback</h4>
             <p class="mt-4 opacity-60">
-              Explore a wide collection of free animated UI components made
-              for modern design systems.
+              Loved a component? Leave a review and help other designers
+              discover the library.
             </p>
           </div>
         </div>

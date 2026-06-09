@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 
 <head>
-  <title><?php bloginfo('name'); ?></title>
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
-  <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
-    rel="stylesheet" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 </head>
 
 <body>
 
 
   <header>
-    <a href="/">
-      <img src="/wp-content/uploads/2026/05/logo.svg" class="logo" alt="" />
+    <a href="<?php echo esc_url(home_url('/')); ?>">
+      <img src="/wp-content/uploads/2026/05/logo.svg" class="logo" alt="<?php bloginfo('name'); ?>" />
     </a>
     <div class="d-none d-lg-block">
       <div class="menu">
@@ -34,14 +28,14 @@
           Donate
           <img src="/wp-content/uploads/2026/05/thumb.svg" alt="" />
         </a>
-        <a href="https://discord.gg/xQjXxdN3" target="_blank" class="bt-icon">
-          <img src="/wp-content/uploads/2026/05/discod.svg" alt="" />
+        <a href="https://discord.gg/xQjXxdN3" target="_blank" rel="noopener noreferrer" class="bt-icon">
+          <img src="/wp-content/uploads/2026/05/discod.svg" alt="Discord" />
         </a>
-        <a href="https://github.com/ugokiui/ugokiui-files.git" target="_blank" class="bt-icon">
-          <img src="/wp-content/uploads/2026/05/github.svg" alt="" />
+        <a href="https://github.com/ugokiui/ugokiui-files.git" target="_blank" rel="noopener noreferrer" class="bt-icon">
+          <img src="/wp-content/uploads/2026/05/github.svg" alt="GitHub" />
         </a>
-        <a href="https://figma.com/@ugokiui" target="_blank" class="bt-icon">
-          <img src="/wp-content/uploads/2026/05/figma.svg" alt="" />
+        <a href="https://figma.com/@ugokiui" target="_blank" rel="noopener noreferrer" class="bt-icon">
+          <img src="/wp-content/uploads/2026/05/figma.svg" alt="Figma" />
         </a>
       </div>
     </div>
@@ -71,14 +65,14 @@
         <a href="/terms-condition">Terms and Conditions</a>
       </div>
       <div class="cta-header d-flex g-2">
-        <a href="https://discord.gg/xQjXxdN3" class="bt-icon">
-          <img src="/wp-content/uploads/2026/05/discod.svg" alt="" />
+        <a href="https://discord.gg/xQjXxdN3" target="_blank" rel="noopener noreferrer" class="bt-icon">
+          <img src="/wp-content/uploads/2026/05/discod.svg" alt="Discord" />
         </a>
-        <a href="https://github.com/ugokiui/ugokiui-files.git" class="bt-icon">
-          <img src="/wp-content/uploads/2026/05/github.svg" alt="" />
+        <a href="https://github.com/ugokiui/ugokiui-files.git" target="_blank" rel="noopener noreferrer" class="bt-icon">
+          <img src="/wp-content/uploads/2026/05/github.svg" alt="GitHub" />
         </a>
-        <a href="https://figma.com/@ugokiui" class="bt-icon">
-          <img src="/wp-content/uploads/2026/05/figma.svg" alt="" />
+        <a href="https://figma.com/@ugokiui" target="_blank" rel="noopener noreferrer" class="bt-icon">
+          <img src="/wp-content/uploads/2026/05/figma.svg" alt="Figma" />
         </a>
       </div>
     </nav>

@@ -3,7 +3,7 @@
  <footer>
       <div class="container">
         <div class="d-flex justify-content-center align-items-center">
-          <img src="/wp-content/uploads/2026/05/logo-footer.svg" class="logo" ="" />
+          <img src="/wp-content/uploads/2026/05/logo-footer.svg" class="logo" alt="" />
         </div>
         <div class="text-center text-white opacity-50 mt-24">
           A product of Creotopi
@@ -15,7 +15,7 @@
         >
           <a href="/component-library/">Browse Components</a>
           <img src="/wp-content/uploads/2026/05/line.svg" class="d-none d-lg-block" alt="" />
-          <a href="/#category">Categoriess</a>
+          <a href="/#category">Categories</a>
           <img src="/wp-content/uploads/2026/05/line.svg" class="d-none d-lg-block" alt="" />
           <a href="/#newrelease">New Releases</a>
           <img src="/wp-content/uploads/2026/05/line.svg" class="d-none d-lg-block" alt="" />
@@ -23,10 +23,10 @@
         </div>
 
         <div class="d-flex g-3 mt-48 social justify-content-center">
-          <a href="#" traget="_blank">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <i class="ti ti-brand-instagram"></i>
           </a>
-          <a href="https://www.figma.com/@ugokiui" traget="_blank">
+          <a href="https://www.figma.com/@ugokiui" target="_blank" rel="noopener noreferrer">
             <i class="ti ti-brand-figma"></i>
           </a>
         </div>
@@ -36,6 +36,5 @@
         </div>
       </div>
     </footer>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 </body>
 </html>

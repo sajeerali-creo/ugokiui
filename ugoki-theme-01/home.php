@@ -1,5 +1,5 @@
 <?php
-/* Template Name: jobbit-jobseeker */
+/* Template Name: Home */
 ?>
 <?php get_header(); ?>
 

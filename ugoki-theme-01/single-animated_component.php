@@ -29,7 +29,7 @@
         <div class="col-lg-6 mb-24">
           <h1 class="h2 mb-24 w-auto w-lg-70"><?php the_title(); ?></h1>
 
-          <p><?php echo get_the_excerpt(); ?></p>
+          <p><?php echo wp_kses_post(get_the_excerpt()); ?></p>
 
           <div class="mt-24 btn-container">
             <a href="<?php echo esc_url( get_field('figma_library') ); ?>" class="btn-primary">
@@ -97,10 +97,10 @@
           <div class="d-flex g-3 list-step align-items-center mb-48">
             <div class="number">5</div>
             <div>
-              <h4>Browse Components</h4>
+              <h4>Share Your Feedback</h4>
               <p class="mt-4 opacity-60">
-                Explore a wide collection of free animated UI components made
-                for modern design systems.
+                Loved this component? Leave a review and help other designers
+                discover the library.
               </p>
             </div>
           </div>

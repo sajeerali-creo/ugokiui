@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateItems() {
     let visibleCount = 0;
+    if (!input) return;
     const query = input.value.toLowerCase().trim();
 
     items.forEach((item) => {

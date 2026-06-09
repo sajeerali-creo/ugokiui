@@ -1,5 +1,5 @@
 <?php
-/* Template Name: component-libarary */
+/* Template Name: component-library */
 ?>
 <?php get_header(); ?>
 <section class="section-bg top-padding-mb pb-48">
@@ -86,7 +86,7 @@
         ?>
 
             <div class="col-lg-4 mb-24 component-item<?php echo esc_attr($term_classes); ?>"
-              data-title="<?php echo strtolower(get_the_title()); ?>">
+              data-title="<?php echo esc_attr(strtolower(get_the_title())); ?>">
 
               <a href="<?php the_permalink(); ?>" class="compo-box">
 
